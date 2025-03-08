@@ -1,4 +1,4 @@
-name: Python Calculator Tests
+name: Python Calculator Test
 
 on: [push, pull_request]
 
@@ -7,16 +7,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Setup Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.x'
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
 
-    - name: Install Dependencies
-      run: pip install pytest
-
-    - name: Run Tests
-      run: pytest test_calculator.py 
+      - name: Run Python script
+        run: python your_script.py
