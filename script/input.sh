@@ -1,1 +1,2 @@
-echo "enter your name"
+echo "Hello how are you?"
+
